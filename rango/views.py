@@ -27,8 +27,7 @@ def about(request):
 
 	context_dict = {'boldmessage': "Gemma"}
 	visitor_cookie_handler(request)
-    context_dict['visits'] = request.session['visits']
-	
+	context_dict['visits'] = request.session['visits']	
 	return render(request, 'rango/about.html', context=context_dict)
 	
 def show_category(request, category_name_slug):
